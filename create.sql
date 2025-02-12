@@ -1,24 +1,40 @@
--- ? 1 database creation
--- ? 2 table create
--- ? 3 drop database
--- ? 5 delete table
+-- Active: 1737896253471@@127.0.0.1@5432@alikaka
+-- currrent database
+-- create db
+-- create user table
+-- insert data into user table
+
+--? task-1
+
+SELECT current_database();
+
+
+-- optional to see all db list
+SELECT datname FROM pg_database;
+
+--? task-2
 
 CREATE DATABASE alikaka;
 
--- user table 
 
-CREATE TABLE users(
+-- ? task 3
+
+CREATE Table users(
     id SERIAL PRIMARY KEY,
     name VARCHAR(30),
-    age INT,
     email VARCHAR(80) UNIQUE,
-    address TEXT
+    contactNo VARCHAR(11),
+    password VARCHAR(12),
+    createdAt DATE DEFAULT NOW()
 );
 
 SELECT * FROM users;
 
-DROP DATABASE alikaka;
+-- ? task - 4
 
--- drop table
+INSERT INTO users(name, email, contactNo, password) 
+VALUES
+('karim1', 'karim1@mail.com', '123456789', '1234567'),
+('rahim', 'harim@mail.com', '123456789', '1234567');
 
-DROP TABLE users;
+-- 1 insert into table_name (column) values ()
