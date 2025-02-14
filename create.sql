@@ -1,8 +1,6 @@
 -- Active: 1737896253471@@127.0.0.1@5432@alikaka
--- currrent database
--- create db
--- create user table
--- insert data into user table
+
+-- insert data into user table with constance
 
 --? task-1
 
@@ -19,22 +17,30 @@ CREATE DATABASE alikaka;
 
 -- ? task 3
 
+DROP TABLE users;
+
 CREATE Table users(
     id SERIAL PRIMARY KEY,
-    name VARCHAR(30),
-    email VARCHAR(80) UNIQUE,
+    name VARCHAR(30) NOT NULL ,
+    email VARCHAR(80) UNIQUE NOT NULL,
+ age INT,
+ CHECK (age >18),
     contactNo VARCHAR(11),
-    password VARCHAR(12),
-    createdAt DATE DEFAULT NOW()
+    password VARCHAR(12) NOT NULL,
+    createdAt DATE DEFAULT CURRENT_TIMESTAMP
 );
 
 SELECT * FROM users;
 
 -- ? task - 4
 
-INSERT INTO users(name, email, contactNo, password) 
-VALUES
-('karim1', 'karim1@mail.com', '123456789', '1234567'),
-('rahim', 'harim@mail.com', '123456789', '1234567');
+
+
+INSERT INTO users (name, email) VALUES ('rahim','rahim3@gamil.com');
+
+
+
+
+
 
 -- 1 insert into table_name (column) values ()
