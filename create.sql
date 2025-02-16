@@ -30,13 +30,23 @@ CREATE Table users(
     createdAt DATE DEFAULT CURRENT_TIMESTAMP
 );
 
-SELECT * FROM users;
+INSERT INTO users
+ (name, email, age, contactNo, password)
+    VALUES
+('John Doe', 'john.doe@ex.com', 25, '01234567890', 'passwd123'),
+('Jane Smith', 'jane.smith@exa.com', 30, '09876543210', 'mypasord1'),
+('Alice Brown', 'alice.brown@exam.com', 22, '01122334455', 'secrpass2'),
+('Bob White', 'bob.white@exam.com', 35, '01987654321', 'bobspasord3'),
+('Charlie Green', 'charlie.green@e.com', 28, '01334455667', 'grepass4');
+
 
 -- ? task - 4
 
 
 
-INSERT INTO users (name, email) VALUES ('rahim','rahim3@gamil.com');
+INSERT INTO users (name, email) 
+VALUES 
+
 
 
 
