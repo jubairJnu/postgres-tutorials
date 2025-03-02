@@ -26,18 +26,17 @@ CREATE Table users(
  age INT,
  CHECK (age >18),
     contactNo VARCHAR(11),
+    district VARCHAR(30),
     password VARCHAR(12) NOT NULL,
     createdAt DATE DEFAULT CURRENT_TIMESTAMP
 );
 
 INSERT INTO users
- (name, email, age, contactNo, password)
+ (name, email,  contactNo, district, password)
     VALUES
-('John Doe', 'john.doe@ex.com', 25, '01234567890', 'passwd123'),
-('Jane Smith', 'jane.smith@exa.com', 30, '09876543210', 'mypasord1'),
-('Alice Brown', 'alice.brown@exam.com', 22, '01122334455', 'secrpass2'),
-('Bob White', 'bob.white@exam.com', 35, '01987654321', 'bobspasord3'),
-('Charlie Green', 'charlie.green@e.com', 28, '01334455667', 'grepass4');
+('John Doew','john.doew1@ex.com','01234567890','dhaka','passwd123'),
+('Jane Smithw','jane.smithw1@exa.com','09876543210','khulna','mypasord1');
+
 
 
 -- ? task - 4
