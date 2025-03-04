@@ -46,6 +46,16 @@ INSERT INTO users
 INSERT INTO users (name, email) 
 VALUES 
 
+CREATE Table orders (
+    id SERIAL PRIMARY KEY,
+    userId INT NOT NULL,
+    total INT,
+    quantity INT
+
+);
+
+INSERT INTO orders (userId,total, quantity)
+VALUES (15,300,1);
 
 
 
